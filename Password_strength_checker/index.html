@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Password Strength Checker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn" aria-label="Toggle dark mode">🌙</button>
+        </div>
+        <h1>Password Strength Checker</h1>
+
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Enter your password">
+            <span class="bottom"></span>
+            <span class="left"></span>
+            <span class="right"></span>
+            <span class="top"></span>
+            <button class="toggle-password" id="toggle-password" aria-label="Show password">
+                <i class="far fa-eye"></i>
+            </button>
+            <button class="copy-btn" id="copy-btn" title="Copy to clipboard">
+                <i class="fas fa-copy"></i>
+            </button>
+        </div>
+
+        <div class="strength-info">
+            <div class="strength-text" id="strength-text">Strength: None</div>
+            <div class="entropy" id="entropy">Entropy: 0 bits</div>
+        </div>
+
+        <div class="strength-meter">
+            <div class="strength-meter-fill" id="strength-meter-fill"></div>
+        </div>
+
+        <div class="requirements" id="requirements">
+            <div class="requirement">
+                <i class="fas fa-times"></i>Minimum 8 characters
+                <div class="tooltip">Password must be at least 8 characters</div>
+            </div>
+            <div class="requirement">
+                <i class="fas fa-times"></i>Uppercase letter
+                <div class="tooltip">Include at least one uppercase letter (A-Z)</div>
+            </div>
+            <div class="requirement">
+                <i class="fas fa-times"></i>Lowercase letter
+                <div class="tooltip">Include at least one lowercase letter (a-z)</div>
+            </div>
+            <div class="requirement">
+                <i class="fas fa-times"></i>Number
+                <div class="tooltip">Include at least one number (0-9)</div>
+            </div>
+            <div class="requirement">
+                <i class="fas fa-times"></i>Special character
+                <div class="tooltip">Include at least one special character (!@#$%^&*)</div>
+            </div>
+        </div>
+
+        <button class="generate-btn" id="generate-btn">Generate Strong Password</button>
+        <div class="info-message">
+            A strong password helps protect your account from unauthorized access
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
